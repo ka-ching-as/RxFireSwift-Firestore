@@ -73,13 +73,13 @@ public class FirebaseService {
     }
 
     // MARK: Observing Collection Paths
-    public func observeSingleEvent<T>(at path: Path<T>.Collection) -> Single<[T]>
+    public func observeSingleEvent<T>(at path: Path<T>.Collection) -> Single<[String: T]>
         where T: Decodable {
             return database.rx.observeSingleEvent(at: path, using: createDecoder())
     }
 
     public func observe<T>(eventType type: CollectionEventType,
-                    at path: Path<T>.Collection) -> Observable<DecodeResult<[T]>>
+                           at path: Path<T>.Collection) -> Observable<DecodeResult<[String: T]>>
         where T: Decodable {
             return database.rx.observe(at: path, using: createDecoder())
     }
