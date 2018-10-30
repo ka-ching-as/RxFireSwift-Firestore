@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3198CF1F2161F10B00640052 /* RxFireSwift_Database.h in Headers */ = {isa = PBXBuildFile; fileRef = 3198CF1D2161F10B00640052 /* RxFireSwift_Database.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3198CF1F2161F10B00640052 /* RxFireSwift_Firestore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3198CF1D2161F10B00640052 /* RxFireSwift_Firestore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3198CF232161F11200640052 /* FirebaseRxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3198CEFA2160F46500640052 /* FirebaseRxExtensions.swift */; };
 		3198CF242161F11200640052 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3198CEF92160F46500640052 /* FirebaseService.swift */; };
 		3198CF252161F15600640052 /* FireSwift_Database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3198CF042160F4AE00640052 /* FireSwift_Database.framework */; };
@@ -39,8 +39,8 @@
 		3198CF072160F4AE00640052 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Carthage/Build/iOS/FirebaseDatabase.framework; sourceTree = "<group>"; };
 		3198CF082160F4AE00640052 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = Carthage/Build/iOS/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		3198CF092160F4AE00640052 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Carthage/Build/iOS/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		3198CF1B2161F10B00640052 /* RxFireSwift_Database.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxFireSwift_Database.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3198CF1D2161F10B00640052 /* RxFireSwift_Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxFireSwift_Database.h; sourceTree = "<group>"; };
+		3198CF1B2161F10B00640052 /* RxFireSwift_Firestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxFireSwift_Firestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3198CF1D2161F10B00640052 /* RxFireSwift_Firestore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxFireSwift_Firestore.h; sourceTree = "<group>"; };
 		3198CF1E2161F10B00640052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,8 +70,7 @@
 		3198CEE62160F42300640052 = {
 			isa = PBXGroup;
 			children = (
-				3198CEF12160F42400640052 /* RxFireSwift-Database */,
-				3198CF1C2161F10B00640052 /* RxFireSwift-Database */,
+				3198CEF12160F42400640052 /* RxFireSwift-Firestore */,
 				3198CEF02160F42400640052 /* Products */,
 				3198CEFD2160F4AD00640052 /* Frameworks */,
 			);
@@ -80,18 +79,20 @@
 		3198CEF02160F42400640052 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3198CF1B2161F10B00640052 /* RxFireSwift_Database.framework */,
+				3198CF1B2161F10B00640052 /* RxFireSwift_Firestore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3198CEF12160F42400640052 /* RxFireSwift-Database */ = {
+		3198CEF12160F42400640052 /* RxFireSwift-Firestore */ = {
 			isa = PBXGroup;
 			children = (
+				3198CF1D2161F10B00640052 /* RxFireSwift_Firestore.h */,
+				3198CF1E2161F10B00640052 /* Info.plist */,
 				3198CEFA2160F46500640052 /* FirebaseRxExtensions.swift */,
 				3198CEF92160F46500640052 /* FirebaseService.swift */,
 			);
-			path = "RxFireSwift-Database";
+			path = "RxFireSwift-Firestore";
 			sourceTree = "<group>";
 		};
 		3198CEFD2160F4AD00640052 /* Frameworks */ = {
@@ -113,15 +114,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3198CF1C2161F10B00640052 /* RxFireSwift-Database */ = {
-			isa = PBXGroup;
-			children = (
-				3198CF1D2161F10B00640052 /* RxFireSwift_Database.h */,
-				3198CF1E2161F10B00640052 /* Info.plist */,
-			);
-			path = "RxFireSwift-Database";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -129,16 +121,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3198CF1F2161F10B00640052 /* RxFireSwift_Database.h in Headers */,
+				3198CF1F2161F10B00640052 /* RxFireSwift_Firestore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3198CF1A2161F10B00640052 /* RxFireSwift-Database */ = {
+		3198CF1A2161F10B00640052 /* RxFireSwift-Firestore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3198CF202161F10B00640052 /* Build configuration list for PBXNativeTarget "RxFireSwift-Database" */;
+			buildConfigurationList = 3198CF202161F10B00640052 /* Build configuration list for PBXNativeTarget "RxFireSwift-Firestore" */;
 			buildPhases = (
 				3198CF162161F10B00640052 /* Headers */,
 				3198CF172161F10B00640052 /* Sources */,
@@ -149,9 +141,9 @@
 			);
 			dependencies = (
 			);
-			name = "RxFireSwift-Database";
+			name = "RxFireSwift-Firestore";
 			productName = "RxFireSwift-Database";
-			productReference = 3198CF1B2161F10B00640052 /* RxFireSwift_Database.framework */;
+			productReference = 3198CF1B2161F10B00640052 /* RxFireSwift_Firestore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -169,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3198CEEA2160F42300640052 /* Build configuration list for PBXProject "RxFireSwift-Database" */;
+			buildConfigurationList = 3198CEEA2160F42300640052 /* Build configuration list for PBXProject "RxFireSwift-Firestore" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -181,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3198CF1A2161F10B00640052 /* RxFireSwift-Database */,
+				3198CF1A2161F10B00640052 /* RxFireSwift-Firestore */,
 			);
 		};
 /* End PBXProject section */
@@ -341,7 +333,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "RxFireSwift-Database/Info.plist";
+				INFOPLIST_FILE = "RxFireSwift-Firestore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,7 +341,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "dk.ka-ching.RxFireSwift-Database";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.ka-ching.RxFireSwift-Firestore";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -375,7 +367,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "RxFireSwift-Database/Info.plist";
+				INFOPLIST_FILE = "RxFireSwift-Firestore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,7 +375,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "dk.ka-ching.RxFireSwift-Database";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.ka-ching.RxFireSwift-Firestore";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -396,7 +388,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3198CEEA2160F42300640052 /* Build configuration list for PBXProject "RxFireSwift-Database" */ = {
+		3198CEEA2160F42300640052 /* Build configuration list for PBXProject "RxFireSwift-Firestore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3198CEF42160F42400640052 /* Debug */,
@@ -405,7 +397,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3198CF202161F10B00640052 /* Build configuration list for PBXNativeTarget "RxFireSwift-Database" */ = {
+		3198CF202161F10B00640052 /* Build configuration list for PBXNativeTarget "RxFireSwift-Firestore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3198CF212161F10B00640052 /* Debug */,

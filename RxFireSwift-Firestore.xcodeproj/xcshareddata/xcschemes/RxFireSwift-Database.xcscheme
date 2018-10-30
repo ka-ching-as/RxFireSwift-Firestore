@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3198CF1A2161F10B00640052"
-               BuildableName = "RxFireSwift_Database.framework"
-               BlueprintName = "RxFireSwift-Database"
-               ReferencedContainer = "container:RxFireSwift-Database.xcodeproj">
+               BuildableName = "RxFireSwift_Firestore.framework"
+               BlueprintName = "RxFireSwift-Firestore"
+               ReferencedContainer = "container:RxFireSwift-Firestore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3198CF1A2161F10B00640052"
-            BuildableName = "RxFireSwift_Database.framework"
-            BlueprintName = "RxFireSwift-Database"
-            ReferencedContainer = "container:RxFireSwift-Database.xcodeproj">
+            BuildableName = "RxFireSwift_Firestore.framework"
+            BlueprintName = "RxFireSwift-Firestore"
+            ReferencedContainer = "container:RxFireSwift-Firestore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3198CF1A2161F10B00640052"
-            BuildableName = "RxFireSwift_Database.framework"
-            BlueprintName = "RxFireSwift-Database"
-            ReferencedContainer = "container:RxFireSwift-Database.xcodeproj">
+            BuildableName = "RxFireSwift_Firestore.framework"
+            BlueprintName = "RxFireSwift-Firestore"
+            ReferencedContainer = "container:RxFireSwift-Firestore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
