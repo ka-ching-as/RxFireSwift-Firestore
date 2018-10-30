@@ -6,7 +6,7 @@
 //  Copyright © 2018 Ka-ching. All rights reserved.
 //
 
-import FirebaseDatabase
+import FirebaseFirestore
 import FireSwift_Database
 import Foundation
 import Result
@@ -55,9 +55,9 @@ public class FirebaseService {
         return decoder
     }
 
-    private let database: Database
+    private let database: Firestore
 
-    public init(database: Database) {
+    public init(database: Firestore) {
         self.database = database
     }
 
@@ -73,25 +73,30 @@ public class FirebaseService {
     }
 
     // MARK: Observing Collection Paths
-    public func observeSingleEvent<T>(of type: CollectionEventType,
-                               at path: Path<T>.Collection) -> Single<T>
+    public func observeSingleEvent<T>(at path: Path<T>.Collection) -> Single<[T]>
         where T: Decodable {
-            return database.rx.observeSingleEvent(of: type, at: path, using: createDecoder())
+            return database.rx.observeSingleEvent(at: path, using: createDecoder())
     }
 
     public func observe<T>(eventType type: CollectionEventType,
-                    at path: Path<T>.Collection) -> Observable<DecodeResult<T>>
+                    at path: Path<T>.Collection) -> Observable<DecodeResult<[T]>>
         where T: Decodable {
-            return database.rx.observe(eventType: type, at: path, using: createDecoder())
+            return database.rx.observe(at: path, using: createDecoder())
     }
 
     // MARK: Adding and Setting
     public func setValue<T>(at path: Path<T>, value: T) throws where T: Encodable {
-        try database.setValue(at: path, value: value, using: createEncoder())
+        let encoder = createEncoder()
+        let data = try encoder.encode(value)
+        guard let dict = data as? [String: Any] else { throw DecodeError.noValuePresent /* TODO */ }
+        database.document(path.rendered).setData(dict)
     }
 
     public func addValue<T>(at path: Path<T>.Collection, value: T) throws where T: Encodable {
-        try database.addValue(at: path, value: value, using: createEncoder())
+        let encoder = createEncoder()
+        let data = try encoder.encode(value)
+        guard let dict = data as? [String: Any] else { throw DecodeError.noValuePresent /* TODO */ }
+        database.collection(path.rendered).addDocument(data: dict)
     }
 }
 

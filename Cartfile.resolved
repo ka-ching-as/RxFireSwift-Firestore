@@ -1,5 +1,6 @@
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json" "5.4.0"
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseDatabaseBinary.json" "5.4.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseFireStoreBinary.json" "5.4.0"
 github "ReactiveX/RxSwift" "4.3.1"
 github "antitypical/Result" "4.0.0"
-github "ka-ching-as/FireSwift-Database" "1ea2b2313ff154d8380d7eab1cad3c73484eb24c"
+github "ka-ching-as/FireSwift-Database" "639ab718310f3872cd7d6e9d542ff26eeea2fd7e"
