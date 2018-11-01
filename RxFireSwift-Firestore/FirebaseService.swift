@@ -1,13 +1,15 @@
 //
 //  FirebaseService.swift
-//  RxFireSwift-Database
+//  RxFireSwift-Firestore
 //
 //  Created by Morten Bek Ditlevsen on 30/09/2018.
 //  Copyright © 2018 Ka-ching. All rights reserved.
 //
 
 import FirebaseFirestore
-import FireSwift_Database
+import FireSwift_DecodeResult
+import FireSwift_Paths
+import FireSwift_StructureCoding
 import Foundation
 import Result
 import RxSwift
@@ -73,30 +75,23 @@ public class FirebaseService {
     }
 
     // MARK: Observing Collection Paths
-    public func observeSingleEvent<T>(at path: Path<T>.Collection) -> Single<[String: T]>
+    public func observeSingleEvent<T>(at path: Path<T>.Collection) -> Single<[T]>
         where T: Decodable {
             return database.rx.observeSingleEvent(at: path, using: createDecoder())
     }
 
-    public func observe<T>(eventType type: CollectionEventType,
-                           at path: Path<T>.Collection) -> Observable<DecodeResult<[String: T]>>
+    public func observe<T>(at path: Path<T>.Collection) -> Observable<DecodeResult<[T]>>
         where T: Decodable {
             return database.rx.observe(at: path, using: createDecoder())
     }
 
     // MARK: Adding and Setting
     public func setValue<T>(at path: Path<T>, value: T) throws where T: Encodable {
-        let encoder = createEncoder()
-        let data = try encoder.encode(value)
-        guard let dict = data as? [String: Any] else { throw DecodeError.noValuePresent /* TODO */ }
-        database.document(path.rendered).setData(dict)
+        try database.setValue(at: path, value: value)
     }
 
     public func addValue<T>(at path: Path<T>.Collection, value: T) throws where T: Encodable {
-        let encoder = createEncoder()
-        let data = try encoder.encode(value)
-        guard let dict = data as? [String: Any] else { throw DecodeError.noValuePresent /* TODO */ }
-        database.collection(path.rendered).addDocument(data: dict)
+        try database.addValue(at: path, value: value)
     }
 }
 

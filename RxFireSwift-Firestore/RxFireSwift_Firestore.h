@@ -1,6 +1,6 @@
 //
-//  RxFireSwift_Database.h
-//  RxFireSwift-Database
+//  RxFireSwift_Firestore.h
+//  RxFireSwift-Firestore
 //
 //  Created by Morten Bek Ditlevsen on 01/10/2018.
 //  Copyright © 2018 Ka-ching. All rights reserved.
