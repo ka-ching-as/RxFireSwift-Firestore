@@ -1,4 +1,4 @@
 # Third party frameworks
 github "antitypical/Result"
 github "ReactiveX/RxSwift" ~> 4.0
-git "../FireSwift-Firestore" "master"
+github "ka-ching-as/FireSwift-Firestore" "master"
