@@ -1,7 +1,7 @@
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json" "5.11.0"
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseFirestoreBinary.json" "5.11.0"
 github "ReactiveX/RxSwift" "4.4.0"
-github "antitypical/Result" "4.0.0"
+github "antitypical/Result" "4.1.0"
 github "ka-ching-as/FireSwift-DecodeResult" "ba74040d8aaffb57a6dca5f5927b9a11ed366e92"
 github "ka-ching-as/FireSwift-Firestore" "7fdc02c33673ba2aef916fd29a08f4efb26906ac"
 github "ka-ching-as/FireSwift-Paths" "f9ff31f3158072e59769f60714c1db62e029d10c"
